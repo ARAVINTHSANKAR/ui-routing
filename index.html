@@ -1,18 +1,20 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"></link>
-    </head>
+<!DOCTYPE>
 
-    <body ng-app="myapp">
+<html ng-app = "myApp">
 
-        <div ui-view></div>
+<head> 
+	<title> routing </title>
+</head>
+<header style = "background-color : black;">
+	Menu Bar
+</header>
+<body> 
+	<div> Before </div>
+	<div ui-view> </div>
+	<div> After </div>
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+	<script src = "app.js"></script>
+</body>
 
-        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="/bower_components/angular/angular.min.js"></script>
-        <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-        <script src="scripts/app.js"></script>
-      <script src="scripts/CompanyController.js"></script>
-        <script src="scripts/service/CompanyService.js"></script>
-    </body>
 </html>

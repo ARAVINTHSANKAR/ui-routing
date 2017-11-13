@@ -1,31 +1,22 @@
-angular.module('myapp', ["ui.router"])
-    .config(function($stateProvider, $urlRouterProvider){
-
-      $urlRouterProvider.otherwise("/home");
-
+angular.module('myApp' , ["ui.router"]).config(function($stateProvider, $urlRouterProvider){
+		$urlRouterProvider.otherwise("/apple");
+		
       $stateProvider
           .state('root', {
               abstract: true,
               url:''
           })
-          .state('root.home', {
-              url: '/home',
-              templateUrl: 'views/home.html',
+          .state('root.apple', {
+              url: '/apple',
+              templateUrl: 'apple.html',
               onEnter: function(){
-                  console.log("enter contacts.detail");
+                  console.log("apple here");
               }
-          }).state('root.home.company', {
-              url: '/company',
-              templateUrl: 'views/company/companyPanel.html',
-              //controller:'CompanyCtrl'
+          }).state('root.apple.banana', {
+              url: '/banana',
+              templateUrl: 'banana.html',
               onEnter: function(){
-                  console.log("enter contacts.detail");
-              }
-          }).state('root.home.employee', {
-              url: '/employee',
-              templateUrl: 'views/employee/employeePanel.html',
-              onEnter: function(){
-                  console.log("enter contacts.detail");
+                  console.log("banana here");
               }
           });
     });
