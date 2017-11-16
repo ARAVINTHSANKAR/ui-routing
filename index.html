@@ -1,20 +1,21 @@
-<!DOCTYPE>
+<!DOCTYPE html>
+<html>
 
-<html ng-app = "myApp">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
 
-<head> 
-	<title> routing </title>
 </head>
-<header style = "background-color : black;">
-	Menu Bar
-</header>
-<body> 
-	<div> Before </div>
-	<div ui-view> </div>
-	<div> After </div>
-	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
-	<script src = "app.js"></script>
+
+<body ng-app = "testApp">
+<div>before</div>
+        <div ui-view></div>
+<div>after</div>    
+     <script src = "angular/angular.js"> </script>
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"> </script>
+	<script src = "angular/app.js"> </script>
+	<script src = "angular/homeController.js"> </script>
+	<script src = "angular/mainPageController.js"></script>
 </body>
 
 </html>

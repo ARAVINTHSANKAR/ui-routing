@@ -1,22 +1,22 @@
-angular.module('myApp' , ["ui.router"]).config(function($stateProvider, $urlRouterProvider){
-		$urlRouterProvider.otherwise("/apple");
+angular.module('testApp', ["ui.router"])
+	.config(function($stateProvider , $urlRouterProvider) {
+		$urlRouterProvider.otherwise("/home")
 		
-      $stateProvider
-          .state('root', {
-              abstract: true,
-              url:''
-          })
-          .state('root.apple', {
-              url: '/apple',
-              templateUrl: 'apple.html',
-              onEnter: function(){
-                  console.log("apple here");
-              }
-          }).state('root.apple.banana', {
-              url: '/banana',
-              templateUrl: 'banana.html',
-              onEnter: function(){
-                  console.log("banana here");
-              }
-          });
-    });
+		$stateProvider
+			.state('root', {
+				abstract : true,
+				url : ''
+			})
+				
+			.state('root.home', {
+				url : '/home',
+				templateUrl : 'Views/home.html',
+				controller : 'homeController'
+			})
+				
+			.state('root.mainPage', {
+				url : '/mainPage',
+				templateUrl : 'Views/mainPage.html',
+				controller : 'mainPageController' 
+			});
+	});
